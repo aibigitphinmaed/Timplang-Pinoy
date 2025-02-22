@@ -49,6 +49,10 @@ a{
     color:black;
 }
 
+.about-home{
+    margin-right:125px;
+}
+
 .side-nav{
     margin:65px 0px 0px 600px;
 }
@@ -57,11 +61,9 @@ a{
     font-size:1.3rem;
 }
 
-.culture{
-    margin-right:125px;
-}
 
-.about-home, .recipe-nav{
+
+.culture, .recipe-nav{
     margin-right:50px;
 }
 
