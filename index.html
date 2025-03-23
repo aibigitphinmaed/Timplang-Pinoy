@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Filipino Cuisine</title>
+    <link rel="icon" href="Images/logo.png" type="image/png">
+
+    <!--CSS import here -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation-bar.css">
+    <link rel="stylesheet" href="css/screen-sizes.css">
+    <link rel="stylesheet" href="css/recipe-list.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- END OF CSS IMPORT-->
+
+    <!-- JS IMPORTS HERE-->
+    <script src="js/index.js"></script>
+    <script src="js/top-bar.js"></script>
+
+    <!-- END OF JS IMPORT-->
+
+
+<!--    &lt;!&ndash; packages/lib/cdn imports&ndash;&gt;-->
+<!--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+<!--    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+<!--    <script src="https://unpkg.com/scrollreveal"></script>-->
+<!--    &lt;!&ndash; &ndash;&gt;-->
+
+</head>
+<body>
+<!--START OF NAVIGATION BAR-->
+<div class="top-bar">
+    <div class="logo">
+        <a href="#" onclick="changeContent('html/home.html')">
+            Timplang Pinoy
+        </a>
+    </div>
+
+    <input type="text" class="search-bar" placeholder="Search...">
+    <ul class="menu" id="menu">
+        <li><a href="#" onclick="changeContent('html/recipe-list.html')" class="italic">Recipe's</a></li>
+        <li class="divider"></li>
+        <li><a href="#" onclick="changeContent('html/services.html')" class="italic">Services</a></li>
+        <li class="divider"></li>
+        <li><a href="#" onclick="changeContent('html/contact.html')" class="italic">Contact</a></li>
+        <li class="divider"></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+<!--END OF NAVIGATION BAR -->
+
+<div class="container" id="container">
+    <div class="main-content" id="main-content">
+        <h1>Welcome</h1>
+        <p>Select a menu option to see content.</p>
+    </div>
+</div>
+
+</body>
+</html>

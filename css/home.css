@@ -1,0 +1,344 @@
+/* General Layout Fixes */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    background-color: orangered;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background-color: orange;
+    transform: scale(1.1);
+}
+
+.image-content {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.spinning-food {
+    width: 300px;
+    height: auto;
+    animation: spin 10s linear infinite;
+    background: transparent;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Why Section */
+.why-section {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.why-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.why-left, .why-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.why-item {
+    margin-bottom: 30px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+.why-item h3 {
+    color: orangered;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.why-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.why-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.why-image {
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleIn 1s ease-out forwards;
+}
+
+.why-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design Fixes */
+@media (max-width: 1024px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .spinning-food {
+        width: 80%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .why-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-left, .why-right, .why-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .why-image img {
+        width: 80%;
+        max-width: 450px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-section {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .why-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .why-item p {
+        font-size: 0.9rem;
+    }
+
+    .spinning-food {
+        width: 70%;
+        max-width: 350px;
+    }
+}
+
+
+/* Popular Recipes Section */
+.popular-recipes {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Recipes Grid */
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.recipe-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.recipe-link {
+    display: inline-block;
+    color: orangered;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.recipe-link:hover {
+    color: darkred;
+}
+
+/* Highlighted Featured Recipe */
+.highlight {
+    background-color: #fff6f2;
+    border: 2px solid orangered;
+}
+
+.highlight h3 {
+    color: orangered;
+}
+
+/* Hover Effects */
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recipes-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .recipes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-card img {
+        height: 160px;
+    }
+}
