@@ -1,0 +1,1 @@
+# timplang-pinoy-static
